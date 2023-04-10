@@ -1,7 +1,5 @@
 package readinglist;
 
-//import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +20,7 @@ public class ReadingListController {
 
 	@Autowired
 	public ReadingListController(ReadingListRepository readingListRepository) {
+		
 		this.readingListRepository = readingListRepository;
 	}
 
@@ -29,17 +28,23 @@ public class ReadingListController {
 	public String readersBooks(@PathVariable("reader") String reader, Model model) {
 		
 		List<Book> readingList = readingListRepository.findByReader(reader);
+		
 		if (readingList != null) {
 			model.addAttribute("books", readingList);
 		}
 		return "readingList";
 	}
-	
+
 	@RequestMapping(value = "/{reader}", method = RequestMethod.POST)
 	public String addToReadingList(@PathVariable("reader") String reader, Book book) {
 		
 		book.setReader(reader);
 		readingListRepository.save(book);
-		return "redirect:/{reader}";
+		
+		return "redirect:/api/{reader}";
 	}
+
 }
+
+
+

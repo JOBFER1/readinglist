@@ -9,7 +9,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,46 +16,22 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
+//@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true) //No funcionará con los tests
+@NoArgsConstructor
 public class Reader implements UserDetails {
 	
-	private static final long serialVersionUID = 1L;
+//	private static final long serialVersionUID = 1L;
 	@Id
 	private String username;
 	private String fullname;
 	private String password;
 
-//	//Necesario
-//	public Reader(String username, String password) {
-//		this.username = username;
-//		this.password = password;
-//	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
+	public Reader(String username, String password) {
 		this.username = username;
-	}
-
-	public String getFullname() {
-		return fullname;
-	}
-
-	public void setFullname(String fullname) {
-		this.fullname = fullname;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
 		this.password = password;
 	}
 
-// UserDetails methods
+// 	UserDetails methods
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		return Arrays.asList(new SimpleGrantedAuthority("READER"));

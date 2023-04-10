@@ -13,12 +13,8 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig 
-//extends WebSecurityConfigurerAdapter 
-{
-//	@Autowired
-//	private ReadingListRepository readerRepository;
-
+public class SecurityConfig {
+	
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
@@ -30,6 +26,7 @@ public class SecurityConfig
 
         	.authorizeHttpRequests()
             .requestMatchers("/")
+//            .requestMatchers("/api/pepe")
             .permitAll()
             .anyRequest()
             .authenticated()
@@ -49,47 +46,7 @@ public class SecurityConfig
 		
 		return http.build();
 		
-//            .and()
-//            .hasRole("READER")
-//            .requestMatchers("/**")
-//            .permitAll()
-
-        //            .and()
-//            .formLogin(login -> login
-//            			.loginPage("/login")
-//                        .failureUrl("/login?error=true"))
-//            ;
-        
-//		http
-//		.authorizeHttpRequests()
-//		.requestMatchers("/")
-//		.hasRole("READER")
-//		.requestMatchers("/**")
-//		.permitAll()
-//		.and()				
-//		.formLogin()
-//		.loginPage("/login")
-//		.failureUrl("/login?error=true");
-		
-
-		
-//      Spring Boot 2
-//		.authorizeRequests()
-//		.antMatchers("/")
-//		.access("hasRole('READER')")
-//		.antMatchers("/**")
-		
 	}
-
-//	@Override
-//	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//		auth.userDetailsService(new UserDetailsService() {
-//			@Override
-//			public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-//				return readerRepository.findByReader(username);
-//			}
-//		});
-//	}
 
 	@Autowired
 	private CustomUserDetailsService userDetailsService;

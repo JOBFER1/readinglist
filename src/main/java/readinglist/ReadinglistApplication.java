@@ -18,6 +18,7 @@ public class ReadinglistApplication
 
 	@Bean
 	public CommandLineRunner dataLoaderUsers(ReaderRepository readerRepo, PasswordEncoder encoder) { 
+		
 		return args -> {
 			readerRepo.deleteAll(); 
 			//Sin campo ID

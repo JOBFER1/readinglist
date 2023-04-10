@@ -19,7 +19,8 @@ public class CustomUserDetailsService implements UserDetailsService {
 //				.orElseThrow(() -> new UsernameNotFoundException("Usuario no encontrado con ese username: " + userName));
 
 		//return new User(user.getPassword(), mapearRoles(user.getAuthorities()));
-		return new Reader(reader.getUsername(), reader.getUsername(), reader.getPassword());
+//		return new Reader(reader.getUsername(), reader.getUsername(), reader.getPassword());
+		return new Reader(reader.getUsername(), reader.getPassword());
 	}
 
 //	private Collection<? extends GrantedAuthority> mapearRoles(Set<Rol> roles) {
