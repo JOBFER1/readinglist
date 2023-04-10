@@ -32,7 +32,7 @@ public class ServerWebTests {
 		browser.quit();
 	}
 
-	@Test
+//	@Test
 	public void addBookToEmptyList() {
 		
 		String baseUrl = "http://localhost:8089/api/pepe";

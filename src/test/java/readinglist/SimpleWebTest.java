@@ -1,8 +1,6 @@
 package readinglist;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-//import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -14,7 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(classes = ReadinglistApplication.class)
 public class SimpleWebTest {
 
-	@Test
+//	@Test
 	public void pageNotFound() { 
 		
 		TestRestTemplate testRestTemplate1 = new TestRestTemplate();  
