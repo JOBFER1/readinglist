@@ -26,21 +26,14 @@ public class SecurityConfig {
 
         	.authorizeHttpRequests()
             .requestMatchers("/")
-//            .requestMatchers("/api/pepe")
             .permitAll()
             .anyRequest()
             .authenticated()
 			
-//			.hasRole("READER")
-            
             .and()
             .formLogin()
             .and()
-            .httpBasic()
-            
-//    		.loginPage("/login")
-//    		.failureUrl("/login?error=true")
-    		;
+            .httpBasic();
 
 		http.authenticationProvider(authenticationProvider());
 		
