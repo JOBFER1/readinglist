@@ -91,44 +91,42 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		
-<!--		<dependency>-->
-<!--	        <groupId>junit</groupId>-->
-<!--        	<artifactId>junit</artifactId>-->
-<!--        <version>4.12</version>-->
-<!--    	    <scope>test</scope>-->
-<!--	    </dependency> 		-->
+		<dependency>
+	        <groupId>junit</groupId>
+        	<artifactId>junit</artifactId>
+<!--        	<version>4.12</version>-->
+    	    <scope>test</scope>
+	    </dependency> 		
 	    
-<!--		<dependency>-->
-<!--    		<groupId>org.seleniumhq.selenium</groupId>-->
-<!--    		<artifactId>selenium-java</artifactId>-->
-<!--    		<version>4.8.3</version>-->
-<!--		</dependency>-->
+		<dependency>
+    		<groupId>org.seleniumhq.selenium</groupId>
+    		<artifactId>selenium-java</artifactId>
+    		<version>4.8.3</version>
+		</dependency>
 		
-<!--		<dependency>-->
-<!--    		<groupId>org.seleniumhq.selenium</groupId>-->
-<!--    		<artifactId>selenium-chrome-driver</artifactId>-->
-<!--    		<version>4.8.3</version>-->
-<!--		</dependency>-->
+		<dependency>
+    		<groupId>org.seleniumhq.selenium</groupId>
+    		<artifactId>selenium-chrome-driver</artifactId>
+    		<version>4.8.3</version>
+		</dependency>
 		
-<!--		<dependency>-->
-<!--    		<groupId>org.seleniumhq.selenium</groupId>-->
-<!--    		<artifactId>selenium-remote-driver</artifactId>-->
-<!--    		<version>4.8.3</version>-->
-<!--		</dependency>-->
+		<dependency>
+    		<groupId>org.seleniumhq.selenium</groupId>
+    		<artifactId>selenium-remote-driver</artifactId>
+    		<version>4.8.3</version>
+		</dependency>
 
-<!--		<dependency>-->
-<!--    		<groupId>org.seleniumhq.selenium</groupId>-->
-<!--    		<artifactId>selenium-chromium-driver</artifactId>-->
-<!--    		<version>4.8.3</version>-->
-<!--		</dependency>-->
+		<dependency>
+    		<groupId>org.seleniumhq.selenium</groupId>
+    		<artifactId>selenium-chromium-driver</artifactId>
+    		<version>4.8.3</version>
+		</dependency>
 		
-<!--		<dependency>-->
-<!--  			<groupId>org.seleniumhq.selenium</groupId>-->
-<!--  			<artifactId>selenium-firefox-driver</artifactId>-->
-<!--  			<version>4.8.3</version>-->
-<!--		</dependency>-->
-
-	    	
+		<dependency>
+  			<groupId>org.seleniumhq.selenium</groupId>
+  			<artifactId>selenium-firefox-driver</artifactId>
+  			<version>4.8.3</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -147,16 +145,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-<!--	<dependencyManagement>-->
-<!--		<dependencies>-->
-<!--			<dependency>-->
-<!--				<groupId>org.springframework.shell</groupId>-->
-<!--				<artifactId>spring-shell-dependencies</artifactId>-->
-<!--				<version>${spring-shell.version}</version>-->
-<!--				<type>pom</type>-->
-<!--				<scope>import</scope>-->
-<!--			</dependency>-->
-<!--		</dependencies>-->
-<!--	</dependencyManagement>-->
 </project>

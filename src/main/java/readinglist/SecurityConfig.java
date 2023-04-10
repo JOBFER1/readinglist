@@ -22,18 +22,18 @@ public class SecurityConfig {
 			.ignoringRequestMatchers(PathRequest.toH2Console())
 			.and()
 			.headers().frameOptions().sameOrigin()
-			.disable();
+			.disable()
 
-//        	.authorizeHttpRequests()
-//            .requestMatchers("/")
-//            .permitAll()
-//            .anyRequest()
-//            .authenticated()
-//			
-//            .and()
-//            .formLogin()
-//            .and()
-//            .httpBasic();
+        	.authorizeHttpRequests()
+            .requestMatchers("/")
+            .permitAll()
+            .anyRequest()
+            .authenticated()
+			
+            .and()
+            .formLogin()
+            .and()
+            .httpBasic();
 
 		http.authenticationProvider(authenticationProvider());
 		
