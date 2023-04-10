@@ -9,7 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
 public class ReadinglistApplication 
-extends SpringBootServletInitializer
+//extends SpringBootServletInitializer
 {
 
 	public static void main(String[] args) {
