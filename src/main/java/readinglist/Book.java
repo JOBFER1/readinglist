@@ -10,9 +10,11 @@ import lombok.Data;
 @Data
 public class Book { 
 	
+	public static String [] strings1 = {"first","second"};
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public Long id;
+	private Long id;
 	private String reader;
 	private String isbn;
 	private String title;
