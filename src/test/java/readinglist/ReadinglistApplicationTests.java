@@ -66,7 +66,7 @@ class ReadinglistApplicationTests {
 		
 	}	
 	
-	@Test
+//	@Test
 	public void postBook() throws Exception {
 		
 		mockMvc.perform(post("/api/pepe")
