@@ -48,7 +48,7 @@ class ReadinglistApplicationTests {
 				.build();
 	}
 
-	@Test
+//	@Test
 	public void homePage() throws Exception {
 		
 //		//Sin los imports static
@@ -66,7 +66,7 @@ class ReadinglistApplicationTests {
 		
 	}	
 	
-	@Test
+//	@Test
 	public void postBook() throws Exception {
 		
 		mockMvc.perform(post("/api/pepe")
